@@ -39,9 +39,26 @@
                 background-color:#f5c58f;
                 padding: 0px 50px;
             }
-            @media only screen and (max-width: 600px){
+            input{
+                font-size: 2rem;
+            }
+            div{
+                display: inline;
+            }
+            input[type="checkbox"] {
+            width: 35px;
+            height: 35px;
+        }
+            @media screen and (min-width: 1080px){
                 body {
                     padding: 0px 30%;
+                }
+                input[type="checkbox"] {
+                    width: 15px;
+                    height: 15px;
+                }
+                input{
+                    font-size: 1em;
                 }
             }
         </style>
@@ -55,15 +72,24 @@
         <b>Laisser mariné au frigo pendant au moins 8h</b>
 
         <h2>Sauce</h2>
-        <p><input type="checkbox"/><span id="ail"></span> gousse d'ail hachées</p>
-        <p><input type="checkbox"/><span id="MinSsamJang"></span>-<span id="MaxSsamJang"></span> g de ssamjang (version piquante mettre gochujang) </p>
-        <p><input type="checkbox"/><span id="Ketchup"></span> g de ketchup</p>
-        <p><input type="checkbox"/><span id="Miel"></span> ml de miel</p>
-        <p><input type="checkbox"/><span id="Curry"></span> cc de curry</p>
-        <p><input type="checkbox"/><span id="Soja"></span> cs de sauce soja</p>
-        <p><input type="checkbox"/><span id="VinagreRiz"></span> cc de vinaigre de riz</p>
-        <p><input type="checkbox"/><span id="HuileSesame"></span> cs d'huile de sésame grillé</p>
-        <p><input type="checkbox"/><span id="Eau"></span> ml d'eau</p>
+        <div><input type="checkbox"/><span id="ail"></span> gousse d'ail hachées</div>
+        <br/>
+        <div><input type="checkbox"/><span id="MinSsamJang"></span>-<span id="MaxSsamJang"></span> g de ssamjang (version piquante mettre gochujang) </div>
+        <br/>
+        <div><input type="checkbox"/><span id="Ketchup"></span> g de ketchup</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Miel"></span> ml de miel</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Curry"></span> cc de curry</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Soja"></span> cs de sauce soja</div>
+        <br/>
+        <div><input type="checkbox"/><span id="VinagreRiz"></span> cc de vinaigre de riz</div>
+        <br/>
+        <div><input type="checkbox"/><span id="HuileSesame"></span> cs d'huile de sésame grillé</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Eau"></span> ml d'eau</div>
+        <br/>
         <b>Laisser mariné à temperature ambiante pendant 8h</b>
 
         <h2>Panure</h2>
