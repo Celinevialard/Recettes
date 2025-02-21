@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            const baseQtyRiz = 300
+            const baseQtyEau  = 450
+            
+            function calcule(){
+                let QtyItem = document.getElementById("QtyItem").value;
+                document.getElementById("Eau").innerText = Math.round(baseQtyEau/baseQtyRiz * QtyItem * 100) / 100;
+               }
+        </script>
+        <style>
+            body {
+                color:#221303;
+                background-color:#f5c58f;
+                padding: 0px 50px;
+            }
+            input{
+                font-size: 2rem;
+            }
+            div{
+                display: inline;
+            }
+            input[type="checkbox"] {
+            width: 35px;
+            height: 35px;
+        }
+            @media screen and (min-width: 1080px){
+                body {
+                    padding: 0px 30%;
+                }
+                input[type="checkbox"] {
+                    width: 15px;
+                    height: 15px;
+                }
+                input{
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+    <body onload="calcule()">
+        <h1>Poulet Coréen</h1>
+        <input id="QtyItem" type="number" value="300" /> 
+        <input type="button" value="Calculer" onclick="calcule()" />
+        <h2>Avant</h2>
+        <b>Rincer dans l'eau clair</b>
+
+        <h2>cuisson</h2>
+        <div><span id="Eau"></span> ml d'eau</div>
+        <br/>
+        <b>Porter à ébulition et attendre 15min sur feu eteins</b>
+
+
+    </body>
+</html>

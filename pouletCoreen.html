@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            const baseQtyPoulet = 1500
+            const baseQtyLait  = 300
+            const baseQtyAil  = 2
+            const baseQtyMinSsamJang  = 100
+            const baseQtyMaxSsamJang  = 150
+            const baseQtyKetchup  = 100
+            const baseQtyMiel  = 90
+            const baseQtyCurry_Soja_VinagreRiz_HuileSesame  = 2
+            const baseQtyEau  = 120
+            const baseQtyMaizena  = 80
+            const baseQtyCarotte_oignon  = 50
+            
+            function calcule(){
+                let QtyPoulet = document.getElementById("QtyPoulet").value;
+                document.getElementById("lait").innerText = Math.round(baseQtyLait/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("ail").innerText = Math.round(baseQtyAil/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("MinSsamJang").innerText = Math.round(baseQtyMinSsamJang/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("MaxSsamJang").innerText = Math.round(baseQtyMaxSsamJang/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Ketchup").innerText = Math.round(baseQtyKetchup/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Miel").innerText = Math.round(baseQtyMiel/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Curry").innerText = Math.round(baseQtyCurry_Soja_VinagreRiz_HuileSesame/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Soja").innerText = Math.round(baseQtyCurry_Soja_VinagreRiz_HuileSesame/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("VinagreRiz").innerText = Math.round(baseQtyCurry_Soja_VinagreRiz_HuileSesame/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("HuileSesame").innerText = Math.round(baseQtyCurry_Soja_VinagreRiz_HuileSesame/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Eau").innerText = Math.round(baseQtyEau/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Maizena").innerText = Math.round(baseQtyMaizena/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Carotte").innerText = Math.round(baseQtyCarotte_oignon/baseQtyPoulet * QtyPoulet * 100) / 100;
+                document.getElementById("Oignon").innerText = Math.round(baseQtyCarotte_oignon/baseQtyPoulet * QtyPoulet * 100) / 100;
+            }
+        </script>
+        <style>
+            body {
+                color:#221303;
+                background-color:#f5c58f;
+                padding: 0px 50px;
+            }
+            input{
+                font-size: 2rem;
+            }
+            div{
+                display: inline;
+            }
+            input[type="checkbox"] {
+            width: 35px;
+            height: 35px;
+        }
+            @media screen and (min-width: 1080px){
+                body {
+                    padding: 0px 30%;
+                }
+                input[type="checkbox"] {
+                    width: 15px;
+                    height: 15px;
+                }
+                input{
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+    <body onload="calcule()">
+        <h1>Poulet Coréen</h1>
+        <input id="QtyPoulet" type="number" value="300" /> 
+        <input type="button" value="Calculer" onclick="calcule()" />
+        <h2>Marinade</h2>
+        <p><span id="lait"></span> ml de lait avec sel et poivre</p>
+        <b>Laisser mariné au frigo pendant au moins 8h</b>
+
+        <h2>Sauce</h2>
+        <div><input type="checkbox"/><span id="ail"></span> gousse d'ail hachées</div>
+        <br/>
+        <div><input type="checkbox"/><span id="MinSsamJang"></span>-<span id="MaxSsamJang"></span> g de ssamjang (version piquante mettre gochujang) </div>
+        <br/>
+        <div><input type="checkbox"/><span id="Ketchup"></span> g de ketchup</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Miel"></span> ml de miel</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Curry"></span> cc de curry</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Soja"></span> cs de sauce soja</div>
+        <br/>
+        <div><input type="checkbox"/><span id="VinagreRiz"></span> cc de vinaigre de riz</div>
+        <br/>
+        <div><input type="checkbox"/><span id="HuileSesame"></span> cs d'huile de sésame grillé</div>
+        <br/>
+        <div><input type="checkbox"/><span id="Eau"></span> ml d'eau</div>
+        <br/>
+        <b>Laisser mariné à temperature ambiante pendant 8h</b>
+
+        <h2>Panure</h2>
+        <p>Mettre <span id="Maizena"></span>g de maizena + farine dans la marinade</p>
+
+        <h2>Cuisson</h2>
+        <p><span id="Carotte"></span> g de carottes</p>
+        <p><span id="Oignon"></span> g d'oignon</p>
+
+    </body>
+</html>
