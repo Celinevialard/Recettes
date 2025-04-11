@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            const baseMeringueQtyOeuf = 1
+            const baseMeringueQtySucre  = 62.5
+            
+            const baseMousseQtyOeuf = 6
+            const baseMousseQtySucre  = 80
+            const baseMousseQtyChocolat  = 200
+            const baseMousseQtyBeurre  = 20
+
+            const baseChatQtyOeuf = 2
+            const baseChatQtySucre  = 60
+            const baseChatQtySucreVanille  = 15
+            const baseChatQtyFarine  = 60
+            const baseChatQtyBeurre  = 60
+
+            function calcule(){
+                let QtyItem = document.getElementById("QtyItem").value;
+                document.getElementById("SucreMeringue").innerText = Math.round(baseMeringueQtySucre/baseMeringueQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("SucreMousse").innerText = Math.round(baseMousseQtySucre/baseMousseQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("ChocolatMousse").innerText = Math.round(baseMousseQtyChocolat/baseMousseQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("BeurreMousse").innerText = Math.round(baseMousseQtyBeurre/baseMousseQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("BeurreChat").innerText = Math.round(baseChatQtyBeurre/baseChatQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("SucreChat").innerText = Math.round(baseChatQtySucre/baseChatQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("SucreVanilleChat").innerText = Math.round(baseChatQtySucreVanille/baseChatQtyOeuf * QtyItem * 100) / 100;
+                document.getElementById("FarineChat").innerText = Math.round(baseChatQtyFarine/baseChatQtyOeuf * QtyItem * 100) / 100;
+               }
+        </script>
+        <style>
+            body {
+                color:#221303;
+                background-color:#f5c58f;
+                padding: 0px 50px;
+            }
+            span{
+                font-weight: bold;
+            }
+            input{
+                font-size: 2rem;
+            }
+            div{
+                display: inline;
+            }
+            input[type="checkbox"] {
+            width: 35px;
+            height: 35px;
+        }
+            @media screen and (min-width: 1080px){
+                body {
+                    padding: 0px 30%;
+                }
+                input[type="checkbox"] {
+                    width: 15px;
+                    height: 15px;
+                }
+                input{
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+    <body onload="calcule()">
+        <input id="QtyItem" type="number" value="1" /> 
+        <input type="button" value="Calculer" onclick="calcule()" />
+        <h1>Meringue</h1>
+        <p><span id="SucreMeringue"></span> g de sucre</p>
+        <p>Mettre au four pendant 1h à 100° C</p>
+
+        <h1>Mousse chocolat</h1>
+        <p><span id="SucreMousse"></span> g de sucre</p>
+        <p><span id="ChocolatMousse"></span> g de chocolat noir</p>
+        <p><span id="BeurreMousse"></span> g de beurre facultatif</p>
+        <p>Faire fondre le chocolat puis le laisser tiédir et non durcir</p>
+        <p>Battre les blancs en neige et ajouter le sucre</p>
+        <p>Incorporer les blanc au chocolat</p>
+
+        <h1>Langues de chat (biscuit)</h1>
+        <p><span id="SucreVanilleChat"></span> g de sucre vanillé</p>
+        <p><span id="SucreChat"></span> g de sucre</p>
+        <p><span id="FarineChat"></span> g de farine</p>
+        <p><span id="BeurreChat"></span> g de beurre facultatif</p>
+        <p>Ramolir le beurre et ajouter sucre, sucré vanillé et farine</p>
+        <p>Incorporer les blancs d'oeuf</p>
+        <p>Faire des bâtonnets</p>
+        <p>Faire cuire 7 à 8 min à four chaud (200°C). Décoller aussitôt et faire refroidir.</p>
+
+    </body>
+</html>
