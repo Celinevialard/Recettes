@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            
+            const baseQtyPomme = 450
+            const baseQtyBeurre  = 150
+            const baseQtySucre  = 100
+            const baseQtySel  = 1
+            const baseQtySucreVanille  = 1
+            const baseQtyOeuf = 3
+            const baseQtyFarine  = 200
+            const baseQtyPoudreLever  = 2
+
+            function calcule(){
+                let QtyItem = document.getElementById("QtyItem").value;
+                document.getElementById("Beurre").innerText = Math.round(baseQtyBeurre/baseQtyPomme * QtyItem * 100) / 100;
+                document.getElementById("Sucre").innerText = Math.round(baseQtySucre/baseQtyPomme * QtyItem * 100) / 100;
+                document.getElementById("Sel").innerText = Math.round(baseQtySel/baseQtyPomme * QtyItem * 100) / 100;
+                document.getElementById("SucreVanille").innerText = Math.round(baseQtySucreVanille/baseQtyPomme * QtyItem * 100) / 100;
+                document.getElementById("Oeuf").innerText = Math.round(baseQtyOeuf/baseQtyPomme * QtyItem * 100) / 100;
+                document.getElementById("Farine").innerText = Math.round(baseQtyFarine/baseQtyPomme * QtyItem * 100) / 100;
+                document.getElementById("PoudreLever").innerText = Math.round(baseQtyPoudreLever/baseQtyPomme * QtyItem * 100) / 100;
+               }
+        </script>
+        <style>
+            body {
+                color:#221303;
+                background-color:#f5c58f;
+                padding: 0px 50px;
+            }
+            span{
+                font-weight: bold;
+            }
+            input{
+                font-size: 2rem;
+            }
+            div{
+                display: inline;
+            }
+            input[type="checkbox"] {
+            width: 35px;
+            height: 35px;
+        }
+            @media screen and (min-width: 1080px){
+                body {
+                    padding: 0px 30%;
+                }
+                input[type="checkbox"] {
+                    width: 15px;
+                    height: 15px;
+                }
+                input{
+                    font-size: 1em;
+                }
+            }
+        </style>
+    </head>
+    <body onload="calcule()">
+        <h1>Cake au pommes</h1>
+        <input id="QtyItem" type="number" value="150" /> 
+        <input type="button" value="Calculer" onclick="calcule()" />
+        <p><span id="Beurre"></span> g de beurre ramolie</p>
+        <p><span id="Sucre"></span> g de sucre</p>
+        <p><span id="Sel"></span> pincé de sel</p>
+        <p><span id="SucreVanille"></span> cc de sucre vanillé</p>
+        <p><span id="Oeuf"></span> oeuf</p>
+        <p>Battre jusqu'à ce que le mélange blanchisse.</p>
+        <p><span id="Farine"></span> g de farine</p>
+        <p><span id="PoudreLever"></span> cc de poudre à lever</p>
+        <p>Battre le tout sans les pommes.</p>
+        <p>Ajouter les morceaux de pommes et bien mélanger avec une spatule.</p>
+        <p>Mettre au four pendant 55-60 min à 160° C</p>
+
+    </body>
+</html>
